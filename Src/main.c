@@ -464,10 +464,10 @@ static void MX_GPIO_Init(void) {
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : FM_IRQN_Pin */
-  GPIO_InitStruct.Pin = FM_IRQN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(FM_IRQN_GPIO_Port, &GPIO_InitStruct);
+  // GPIO_InitStruct.Pin = FM_IRQN_Pin;
+  // GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  // GPIO_InitStruct.Pull = GPIO_PULLUP;
+  // HAL_GPIO_Init(FM_IRQN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : FM_SSN_Pin */
   GPIO_InitStruct.Pin = FM_SSN_Pin;
@@ -495,11 +495,11 @@ static void MX_GPIO_Init(void) {
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-  if (GPIO_Pin == FM_IRQN_Pin) {
-    nfc_handler();
-  }
-}
+// void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+//   if (GPIO_Pin == FM_IRQN_Pin) {
+//     nfc_handler();
+//   }
+// }
 /* USER CODE END 4 */
 
 /**
